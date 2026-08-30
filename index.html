@@ -1,739 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>THE AGI — Artificial General Intelligence Ecosystem</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+  <title>AWI Ecosystem – The Architecture of Artificial Wisdom</title>
+  <script src="https://tailwindcss.com"></script>
+  <link href="https://googleapis.com" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #07090e;
-      --card-bg: rgba(13, 17, 26, 0.7);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --text-main: #f1f5f9;
-      --text-muted: #94a3b8;
-      --text-sub: #64748b;
-      --accent-cyan: #22d3ee;
-      --accent-purple: #c084fc;
-      --accent-blue: #38bdf8;
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      font-family: var(--font-sans);
-      line-height: 1.6;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-      background-size: 40px 40px;
-      padding-bottom: 60px;
-      overflow-x: hidden;
-    }
-
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* HEADER */
-    header {
-      padding: 40px 0 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .brand-logo {
-      font-weight: 700;
-      font-size: 1.25rem;
-      letter-spacing: 2px;
-    }
-    .brand-logo span {
-      color: var(--accent-purple);
-    }
-    .brand-sub {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--text-sub);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 60px 0 40px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -30%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle at center, rgba(56, 189, 248, 0.12), rgba(34, 211, 238, 0.05), transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-      animation: pulseGlow 12s infinite alternate ease-in-out;
-      z-index: 0;
-    }
-    .hero .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    @keyframes pulseGlow {
-      0% { transform: translateX(-50%) scale(1); opacity: 0.6; }
-      100% { transform: translateX(-50%) scale(1.4); opacity: 1; }
-    }
-
-    .tagline-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 24px;
-    }
-    .dot {
-      width: 6px;
-      height: 6px;
-      background-color: var(--accent-purple);
-      border-radius: 50%;
-    }
-    h1.hero-title {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 24px;
-      letter-spacing: -1px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #06080F;
     }
     .gradient-text {
-      background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-cyan) 50%, var(--accent-purple) 100%);
+      background: linear-gradient(135deg, #38BDF8 0%, #A855F7 50%, #10B981 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .hero-description {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      max-width: 620px;
-      margin: 0 auto 40px;
-      font-weight: 400;
+    .card-blur {
+      background: rgba(11, 15, 25, 0.8);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* QUOTE */
-    .quote-box {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 36px 28px;
-      margin-bottom: 80px;
-      backdrop-filter: blur(10px);
-      text-align: center;
+    /* MANIFESTO STILI */
+    .manifesto-box {
+      background: rgba(11, 15, 25, 0.8);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 48px 36px;
+      margin: 60px auto 80px;
+      max-width: 760px;
       transition: border-color 0.4s ease, box-shadow 0.4s ease;
     }
-    .quote-box:hover {
-      border-color: rgba(34, 211, 238, 0.3);
-      box-shadow: 0 0 30px rgba(34, 211, 238, 0.05);
+    .manifesto-box:hover {
+      border-color: rgba(168, 85, 247, 0.3);
+      box-shadow: 0 0 40px rgba(168, 85, 247, 0.06);
     }
-    .quote-box p {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--text-main);
-      margin-bottom: 16px;
-    }
-    .quote-box .quote-meta {
-      font-family: var(--font-mono);
+    .manifesto-tag {
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.7rem;
-      color: var(--text-sub);
+      color: #A855F7;
       text-transform: uppercase;
       letter-spacing: 2px;
-    }
-
-    /* SECTION */
-    .section-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    .section-tag {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--accent-purple);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
+      margin-bottom: 20px;
       display: block;
     }
-    .section-title {
-      font-size: 2.25rem;
-      font-weight: 700;
-      margin-bottom: 16px;
+    .manifesto-content p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #94a3b8;
+      margin: 0;
     }
-    .section-subtitle {
-      color: var(--text-muted);
-      font-size: 1rem;
-    }
-    .layer-divider {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--accent-cyan);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin: 60px 0 24px;
-      display: block;
-      opacity: 0.8;
-    }
-
-    /* CARDS */
-    .cards-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-    }
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      overflow: hidden;
-      backdrop-filter: blur(10px);
-      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.4s ease, box-shadow 0.4s ease;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-    }
-    .card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .card:hover {
-      border-color: rgba(34, 211, 238, 0.35);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(34, 211, 238, 0.05);
-    }
-    .card-image-wrapper {
-      width: 100%;
-      background-color: #000000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-      border-bottom: 1px solid var(--card-border);
-    }
-    .card-image-wrapper img {
-      max-width: 100%;
-      height: auto;
-      max-height: 240px;
-      object-fit: contain;
-    }
-    .card-content {
-      padding: 32px;
-    }
-    .card-meta {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--accent-purple);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 8px;
-    }
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: var(--text-main);
-    }
-    .card-slogan {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--accent-cyan);
-      margin-bottom: 14px;
-      letter-spacing: 0.5px;
-    }
-    .card-desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    /* FOOTER BOX */
-    .footer-box {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 48px 32px;
-      text-align: center;
-      margin-top: 80px;
-      margin-bottom: 60px;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-    }
-    .footer-box.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .footer-box:hover {
-      border-color: rgba(34, 211, 238, 0.2);
-      box-shadow: 0 0 40px rgba(34, 211, 238, 0.03);
-    }
-    .footer-box p {
-      color: var(--text-muted);
-      font-size: 1rem;
-      max-width: 580px;
-      margin: 20px auto 0;
-    }
-
-    /* CONTACT */
-    .contact-container {
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .contact-label {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-sub);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 12px;
-    }
-    .contact-email {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      color: var(--accent-cyan);
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      background: rgba(34, 211, 238, 0.05);
-      border: 1px solid rgba(34, 211, 238, 0.2);
-      transition: all 0.3s ease;
-    }
-    .contact-email:hover {
-      background: rgba(34, 211, 238, 0.12);
-      border-color: var(--accent-cyan);
+    .manifesto-content strong {
       color: #ffffff;
-      box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+      font-weight: 600;
     }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 40px;
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
+    .manifesto-content em {
+      color: #34d399;
+      font-style: normal;
       font-weight: 500;
-      color: #02120f;
-      text-decoration: none;
-      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-      border-radius: 40px;
-      border: none;
-      letter-spacing: 1px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 20px rgba(34, 211, 238, 0.25);
-    }
-    .cta-button:hover {
-      transform: scale(1.04);
-      box-shadow: 0 8px 30px rgba(34, 211, 238, 0.4);
+      display: block;
+      margin-top: 24px;
+      font-size: 1.1rem;
     }
 
-    footer {
-      text-align: center;
-      font-family: var(--font-mono);
+    /* NAVIGATION LINK STILI */
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .nav-links a {
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.75rem;
-      color: var(--text-sub);
-      letter-spacing: 1.5px;
+      color: #94a3b8;
       text-transform: uppercase;
-      opacity: 0.5;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 40px;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.02);
     }
-
-    @media (max-width: 600px) {
-      h1.hero-title {
-        font-size: 2.25rem;
-      }
-      .section-title {
-        font-size: 1.75rem;
-      }
-      .card-content {
-        padding: 24px;
-      }
-      .card-image-wrapper {
-        padding: 24px 16px;
-      }
-      .hero::before {
-        width: 400px;
-        height: 400px;
-      }
+    .nav-links a:hover {
+      color: #ffffff;
+      border-color: rgba(168, 85, 247, 0.4);
+      background: rgba(168, 85, 247, 0.08);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.06);
     }
   </style>
 </head>
 
-<body>
+<body class="text-white min-h-screen flex flex-col justify-between selection:bg-purple-600 selection:text-white">
 
-<div class="container">
-
-  <!-- HEADER -->
-  <header>
-    <div class="brand-logo">THE AGI<span>.</span></div>
-    <div class="brand-sub">Artificial General Intelligence</div>
+  <header class="max-w-7xl w-full mx-auto px-6 py-6 flex flex-wrap items-center justify-between border-b border-gray-800 gap-4">
+    <div class="text-2xl font-bold tracking-wider text-white">AWI<span class="text-purple-500">.</span></div>
+    <div class="flex flex-wrap items-center gap-4">
+      <span class="text-xs tracking-widest text-emerald-400 font-mono uppercase bg-emerald-950/60 px-4 py-1.5 rounded-full border border-emerald-500/30">Premium Portfolio Available for Acquisition</span>
+      <!-- YÖNLENDİRME LİNKLERİ (HEADER) -->
+      <div class="nav-links">
+        <a href="https://www.theagimind.com/" target="_blank">AGI</a>
+        <a href="https://www.theasimind.com/" target="_blank">ASI</a>
+      </div>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="tagline-pill">
-        <span class="dot"></span> THE FRONTIER OF GENERAL COGNITION
-      </div>
-      <h1 class="hero-title">
-        Artificial<br>
-        <span class="gradient-text">General Intelligence</span>
-      </h1>
-      <p class="hero-description">
-        THE AGI explores the emerging horizon of artificial cognition —
-        a conceptual architecture connecting synthetic reasoning,
-        deep understanding, safety, verification,
-        unknown boundaries and physical reality.
-      </p>
+  <main class="max-w-6xl w-full mx-auto px-6 py-16 flex-grow">
 
-      <div class="quote-box">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight mb-6 leading-tight">AWI Ecosystem <br><span class="gradient-text">The Architecture of Artificial Wisdom</span></h1>
+      <p class="text-xl text-gray-100 font-semibold mb-6 italic">"Intelligence processes data; wisdom creates meaning."</p>
+      <p class="text-white text-base md:text-lg font-normal leading-relaxed text-justify md:text-center">In today's era of artificial intelligence, the determining factor will not only be the abundance of data, but also the depth of understanding. At this very intersection, the concept of AWI (Artificial Wisdom Intelligence) emerges: not just learning, but comprehending; not just calculating, but questioning; not just optimizing, but embedding ethics into the core of the information age.</p>
+      <p class="text-white text-base md:text-lg font-normal leading-relaxed mt-4 text-justify md:text-center">This portfolio consists of six strategic domain names, each representing a distinct layer of a future-ready artificial wisdom ecosystem. Together, they form a complete, integrated digital asset — ready to be acquired by a corporate holding, a technology fund, or a visionary global initiative.</p>
+    </div>
+
+    <!-- MANIFESTO / AWI -->
+    <div class="manifesto-box">
+      <span class="manifesto-tag">MANIFESTO</span>
+      <div class="manifesto-content">
         <p>
-          “The next frontier is not simply faster processing.
-          It is the emergence of general understanding.”
+          <strong>Beyond Capability</strong><br><br>
+          Intelligence processes data.<br>
+          Wisdom creates meaning.<br><br>
+          Artificial Wisdom Intelligence explores the layer<br>
+          where systems are measured not only by what they know,<br>
+          but by how they understand, prioritize, and restrain.<br><br>
+          <strong>AW</strong> is the vision.<br>
+          <strong>AWI</strong> is the intelligence that would give that vision form —<br>
+          cognition with context, power with responsibility,<br>
+          scale with judgment.<br><br>
+          This is not a replacement for AI, AGI, or ASI.<br>
+          It is the question that must follow them:<br>
+          <em>“what comes after intelligence<br>
+          when understanding matters as much as computation?”</em><br><br>
+          Intelligence processes data.<br>
+          <strong>Wisdom creates meaning.</strong>
         </p>
-        <div class="quote-meta">THE IDEA BEHIND THE AGI</div>
       </div>
     </div>
-  </section>
 
-  <!-- CONCEPT -->
-  <section>
-    <div class="section-header">
-      <span class="section-tag">THE CONCEPT</span>
-      <h2 class="section-title">Beyond Task-Specific AI</h2>
-      <p class="section-subtitle">
-        Artificial General Intelligence represents a theoretical
-        and architectural leap where machine cognition can operate
-        across domains, reason through complexity,
-        interact with reality and confront its own boundaries.
-      </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="card-blur rounded-2xl overflow-hidden hover:border-purple-500/40 transition duration-300 flex flex-col h-full"><div class="bg-black/60 p-2 flex justify-center items-center aspect-[3/2]"><img src="mind.png" alt="AWImind Logo" class="max-h-full max-w-full object-contain"></div><div class="p-6 flex flex-col flex-grow justify-between"><div><h3 class="text-xl font-bold text-white mb-2">awimind.com</h3><p class="text-gray-200 text-sm font-normal leading-relaxed">Where intelligence meets wisdom. The philosophical and cognitive heart of the framework.</p></div><div class="mt-4 pt-4 border-t border-gray-800 text-xs font-mono text-purple-400">Layer 01 // Cognitive Heart</div></div></div>
+      <div class="card-blur rounded-2xl overflow-hidden hover:border-purple-500/40 transition duration-300 flex flex-col h-full"><div class="bg-black/60 p-2 flex justify-center items-center aspect-[3/2]"><img src="core.png" alt="AWIcore Logo" class="max-h-full max-w-full object-contain"></div><div class="p-6 flex flex-col flex-grow justify-between"><div><h3 class="text-xl font-bold text-white mb-2">awicore.com</h3><p class="text-gray-200 text-sm font-normal leading-relaxed">The core algorithms and infrastructure of artificial wisdom. The solid foundation of technical depth.</p></div><div class="mt-4 pt-4 border-t border-gray-800 text-xs font-mono text-purple-400">Layer 02 // Core Infrastructure</div></div></div>
+      <div class="card-blur rounded-2xl overflow-hidden hover:border-purple-500/40 transition duration-300 flex flex-col h-full"><div class="bg-black/60 p-2 flex justify-center items-center aspect-[3/2]"><img src="hub.png" alt="AWIhub Logo" class="max-h-full max-w-full object-contain"></div><div class="p-6 flex flex-col flex-grow justify-between"><div><h3 class="text-xl font-bold text-white mb-2">awihub.com</h3><p class="text-gray-200 text-sm font-normal leading-relaxed">The convergence point for developers, thinkers, and platforms. The ecosystem's central nervous system.</p></div><div class="mt-4 pt-4 border-t border-gray-800 text-xs font-mono text-purple-400">Layer 03 // Central Nervous System</div></div></div>
+      <div class="card-blur rounded-2xl overflow-hidden hover:border-purple-500/40 transition duration-300 flex flex-col h-full"><div class="bg-black/60 p-2 flex justify-center items-center aspect-[3/2]"><img src="deep.png" alt="AWIdeep Logo" class="max-h-full max-w-full object-contain"></div><div class="p-6 flex flex-col flex-grow justify-between"><div><h3 class="text-xl font-bold text-white mb-2">awideep.com</h3><p class="text-gray-200 text-sm font-normal leading-relaxed">The deep learning layer where big data intersects with wisdom. The art of making data meaningful.</p></div><div class="mt-4 pt-4 border-t border-gray-800 text-xs font-mono text-purple-400">Layer 04 // Deep Learning Layer</div></div></div>
+      <div class="card-blur rounded-2xl overflow-hidden hover:border-purple-500/40 transition duration-300 flex flex-col h-full"><div class="bg-black/60 p-2 flex justify-center items-center aspect-[3/2]"><img src="safe.png" alt="AWIsafe Logo" class="max-h-full max-w-full object-contain"></div><div class="p-6 flex flex-col flex-grow justify-between"><div><h3 class="text-xl font-bold text-white mb-2">awisafe.com</h3><p class="text-gray-200 text-sm font-normal leading-relaxed">The security and ethics protocol that safeguards the future of wisdom. The fortress of digital trust.</p></div><div class="mt-4 pt-4 border-t border-gray-800 text-xs font-mono text-purple-400">Layer 05 // Ethics & Security Protocol</div></div></div>
+      <div class="card-blur rounded-2xl overflow-hidden hover:border-purple-500/40 transition duration-300 flex flex-col h-full"><div class="bg-black/60 p-2 flex justify-center items-center aspect-[3/2]"><img src="systems.png" alt="AWIsystems Logo" class="max-h-full max-w-full object-contain"></div><div class="p-6 flex flex-col flex-grow justify-between"><div><h3 class="text-xl font-bold text-white mb-2">awisystems.com</h3><p class="text-gray-200 text-sm font-normal leading-relaxed">An end-to-end infrastructure solution ready for enterprise-scale deployment. Scalable, robust, and reliable.</p></div><div class="mt-4 pt-4 border-t border-gray-800 text-xs font-mono text-purple-400">Layer 06 // Enterprise Deployment</div></div></div>
     </div>
 
-    <!-- ARCHITECTURE -->
-    <div class="section-header" style="margin-top: 60px;">
-      <span class="section-tag">AGI ARCHITECTURE</span>
-      <h2 class="section-title">
-        Three Layers.<br>
-        <span class="gradient-text">Twelve Dimensions.</span>
-      </h2>
-      <p class="section-subtitle">
-        A structured conceptual framework mapping the foundations,
-        dynamics, boundaries, safeguards and physical dimensions
-        of artificial general intelligence.
-      </p>
+    <div class="mt-24 max-w-3xl mx-auto card-blur p-8 md:p-12 rounded-3xl border border-purple-500/20 text-center">
+      <p class="text-white text-base md:text-lg font-normal leading-relaxed mb-6">These six names are far more than mere domain names. They represent a strategic toolkit capable of unifying corporate identity, product silos, and market positioning under a single vision — the vision of "Artificial Wisdom."</p>
+      <p class="text-gray-200 text-sm font-normal mb-8">Today, these names may be available. But as the "AWI" concept gains traction in the coming years, this portfolio will become one of the most valuable digital real estate assets in the world.</p>
+      <div class="bg-purple-950/40 border border-purple-500/40 rounded-2xl p-4 mb-8 text-sm font-mono text-purple-300">🚀 STATUS: This package is available for acquisition as a complete bundle.</div>
+      <a href="https://dan.com" target="_blank" class="inline-block bg-gradient-to-r from-purple-600 to-emerald-500 hover:from-purple-500 hover:to-emerald-400 text-white font-semibold tracking-wide px-10 py-4 rounded-xl transition duration-300 transform hover:scale-[1.01] shadow-lg shadow-purple-950/40">Submit an Acquisition Inquiry</a>
     </div>
 
-    <div class="cards-stack">
+  </main>
 
-      <!-- LAYER I -->
-      <span class="layer-divider">LAYER I / FOUNDATIONS & COGNITION</span>
-
-      <!-- 01 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="theagimind.png" alt="theAGImind Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">01 / GENESIS</div>
-          <h3 class="card-title">theAGImind</h3>
-          <p class="card-desc">
-            The conceptual center of THE AGI ecosystem —
-            exploring the genesis of general intelligence,
-            synthetic reasoning, abstraction,
-            multi-domain problem solving and
-            the architecture of autonomous thought.
-          </p>
-        </div>
-      </article>
-
-      <!-- 02 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-deep.png" alt="AGI Deep Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">02 / UNDERSTANDING</div>
-          <h3 class="card-title">AGI Deep</h3>
-          <p class="card-desc">
-            Moving beyond deep learning toward deep understanding —
-            exploring multi-layered context,
-            implicit logic and conceptual synthesis
-            beyond statistical pattern matching.
-          </p>
-        </div>
-      </article>
-
-      <!-- 03 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-cortex.png" alt="AGI Cortex Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">03 / ARCHITECTURE</div>
-          <h3 class="card-title">AGI Cortex</h3>
-          <p class="card-desc">
-            Exploring the central architecture of general cognition —
-            memory systems, executive reasoning,
-            decision-making layers and the computational
-            organization of autonomous intelligence.
-          </p>
-        </div>
-      </article>
-
-      <!-- LAYER II -->
-      <span class="layer-divider">LAYER II / DYNAMICS & COMPLEXITY</span>
-
-      <!-- 04 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-fold.png" alt="AGI Fold Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">04 / GEOMETRY</div>
-          <h3 class="card-title">AGI Fold</h3>
-          <p class="card-desc">
-            Applying general intelligence to high-dimensional systems,
-            complex geometry, molecular structures
-            and non-linear problems where
-            traditional computation reaches its limits.
-          </p>
-        </div>
-      </article>
-
-      <!-- 05 / AGI SYNAPSE (YENİ) -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-synapse.png" alt="AGI Synapse Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">05 / SYNAPSE</div>
-          <h3 class="card-title">AGI Synapse</h3>
-          <div class="card-slogan">The Architecture of Synthetic Signal.</div>
-          <p class="card-desc">
-            The architecture of synthetic signal —
-            orchestrating high-speed neural routing,
-            dynamic signal pathways,
-            and synaptic connectivity across autonomous intelligence systems.
-          </p>
-        </div>
-      </article>
-
-      <!-- 06 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-pulse.png" alt="AGI Pulse Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">06 / REAL-TIME</div>
-          <h3 class="card-title">AGI Pulse</h3>
-          <p class="card-desc">
-            Monitoring the real-time pulse of intelligence —
-            continuous reasoning,
-            adaptive response,
-            live state synchronization
-            and dynamic decision-making across systems.
-          </p>
-        </div>
-      </article>
-
-      <!-- 07 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-omni.png" alt="AGI Omni Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">07 / DIMENSIONS</div>
-          <h3 class="card-title">AGI Omni</h3>
-          <p class="card-desc">
-            Intelligence across modalities and dimensions —
-            integrating language,
-            vision,
-            spatial awareness,
-            sensory information
-            and abstract reasoning into a unified system.
-          </p>
-        </div>
-      </article>
-
-      <!-- LAYER III -->
-      <span class="layer-divider">LAYER III / ALIGNMENT, SAFETY & REALITY</span>
-
-      <!-- 08 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-guard.png" alt="AGI Guard Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">08 / PERIMETER</div>
-          <h3 class="card-title">AGI Guard</h3>
-          <p class="card-desc">
-            Establishing operational boundaries
-            for autonomous intelligence —
-            active guardrails,
-            safety constraints
-            and containment frameworks.
-          </p>
-        </div>
-      </article>
-
-      <!-- 09 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-sentry.png" alt="AGI Sentry Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">09 / VIGILANCE</div>
-          <h3 class="card-title">AGI Sentry</h3>
-          <p class="card-desc">
-            Continuous observation of autonomous systems —
-            monitoring behavior,
-            detecting goal drift
-            and preserving alignment
-            as intelligence becomes increasingly autonomous.
-          </p>
-        </div>
-      </article>
-
-      <!-- 10 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-verify.png" alt="AGI Verify Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">10 / VERIFICATION</div>
-          <h3 class="card-title">AGI Verify</h3>
-          <p class="card-desc">
-            Exploring verifiable intelligence —
-            formal reasoning,
-            trust mechanisms,
-            validation systems
-            and methods for distinguishing
-            reliable conclusions from uncertainty.
-          </p>
-        </div>
-      </article>
-
-      <!-- 11 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agivoid.png" alt="AGI Void Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">11 / BLIND SPOTS</div>
-          <h3 class="card-title">AGI Void</h3>
-          <div class="card-slogan">Filling the Blind Spots of AGI.</div>
-          <p class="card-desc">
-            Exploring the unknown spaces within general intelligence —
-            hidden limitations,
-            unresolved uncertainty,
-            cognitive blind spots
-            and the boundaries between
-            what an AGI can understand
-            and what it cannot yet see.
-          </p>
-        </div>
-      </article>
-
-      <!-- 12 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-matter.png" alt="AGI Matter Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">12 / MATERIALIZATION</div>
-          <h3 class="card-title">AGI Matter</h3>
-          <p class="card-desc">
-            Bridging artificial cognition with physical reality —
-            robotics,
-            material science,
-            bio-computational interfaces
-            and the execution of intelligent decisions
-            in the real world.
-          </p>
-        </div>
-      </article>
-
+  <footer class="border-t border-gray-900 w-full py-6 text-center text-xs text-gray-500 font-mono">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <span>&copy; 2026 AWI Digital Ecosystem Portfolio. All rights reserved.</span>
+      <div class="flex gap-6">
+        <a href="https://www.theagimind.com/" target="_blank" class="hover:text-white transition-colors">AGI</a>
+        <a href="https://www.theasimind.com/" target="_blank" class="hover:text-white transition-colors">ASI</a>
+      </div>
     </div>
-  </section>
-
-  <!-- FOOTER BOX -->
-  <div class="footer-box">
-    <span class="section-tag">THE FRONTIER</span>
-    <h2 class="section-title">
-      What happens when
-      <span class="gradient-text">understanding scales?</span>
-    </h2>
-    <p>
-      THE AGI is a conceptual architecture for exploring
-      the possibilities, boundaries, safeguards,
-      unknown spaces and fundamental dimensions
-      of artificial general intelligence.
-    </p>
-
-    <div style="margin: 24px 0 16px;">
-      <a href="#top" class="cta-button">Explore the Architecture</a>
-    </div>
-
-    <div class="contact-container">
-      <div class="contact-label">Please write to get in touch</div>
-      <a href="mailto:erayy4405@gmail.com" class="contact-email">erayy4405@gmail.com</a>
-    </div>
-
-    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-sub); margin-top: 24px; letter-spacing: 2px;">
-      THE AGI / ARTIFICIAL GENERAL INTELLIGENCE
-    </div>
-  </div>
-
-  <footer>
-    THE AGI. — EXPLORING THE FRONTIER OF GENERAL INTELLIGENCE
-    <br>
-    <span style="opacity: 0.5; margin-top: 6px; display: inline-block;">© 2026</span>
   </footer>
 
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
-
-    document.querySelectorAll('.card, .footer-box').forEach(el => {
-      observer.observe(el);
-    });
-  });
-</script>
-
 </body>
+
 </html>
