@@ -73,17 +73,17 @@
     }
     .nav-links {
       display: flex;
-      gap: 20px;
+      gap: 12px;
       flex-wrap: wrap;
     }
     .nav-links a {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.6rem;
       color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.2px;
       text-decoration: none;
-      padding: 6px 14px;
+      padding: 6px 12px;
       border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 40px;
       transition: all 0.3s ease;
@@ -94,6 +94,15 @@
       border-color: rgba(34, 211, 238, 0.4);
       background: rgba(34, 211, 238, 0.08);
       box-shadow: 0 0 20px rgba(34, 211, 238, 0.06);
+    }
+    .nav-links a.genesis-link {
+      color: #10B981;
+      border-color: rgba(16, 185, 129, 0.25);
+    }
+    .nav-links a.genesis-link:hover {
+      border-color: rgba(16, 185, 129, 0.6);
+      background: rgba(16, 185, 129, 0.08);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.06);
     }
 
     .hero {
@@ -272,7 +281,6 @@
       gap: 32px;
     }
 
-    /* CARD LINK */
     .card-link {
       text-decoration: none;
       color: inherit;
@@ -344,7 +352,6 @@
       line-height: 1.6;
     }
 
-    /* GROUP TAGS */
     .group-tag {
       display: inline-block;
       font-family: var(--font-mono);
@@ -458,7 +465,7 @@
     }
     footer .footer-links {
       display: flex;
-      gap: 24px;
+      gap: 16px;
       justify-content: center;
       margin-top: 12px;
       flex-wrap: wrap;
@@ -467,11 +474,17 @@
       color: var(--text-muted);
       text-decoration: none;
       transition: color 0.3s ease;
-      font-size: 0.7rem;
-      letter-spacing: 1px;
+      font-size: 0.6rem;
+      letter-spacing: 1.2px;
     }
     footer .footer-links a:hover {
       color: #ffffff;
+    }
+    footer .footer-links a.genesis-link {
+      color: #10B981;
+    }
+    footer .footer-links a.genesis-link:hover {
+      color: #34D399;
     }
 
     @media (max-width: 600px) {
@@ -510,6 +523,7 @@
     <div class="brand-logo">THE AGI<span>.</span></div>
     <div class="brand-sub">Artificial General Intelligence</div>
     <div class="nav-links">
+      <a href="https://www.themindgenesis.com/" target="_blank" class="genesis-link">TMG</a>
       <a href="https://www.theawimind.com/" target="_blank">AWI</a>
       <a href="https://www.theasimind.com/" target="_blank">ASI</a>
     </div>
@@ -890,6 +904,7 @@
     <br>
     <span style="opacity: 0.5; margin-top: 6px; display: inline-block;">© 2026</span>
     <div class="footer-links">
+      <a href="https://www.themindgenesis.com/" target="_blank" class="genesis-link">TMG</a>
       <a href="https://www.theawimind.com/" target="_blank">AWI</a>
       <a href="https://www.theasimind.com/" target="_blank">ASI</a>
     </div>
