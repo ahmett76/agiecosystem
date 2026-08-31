@@ -271,6 +271,14 @@
       flex-direction: column;
       gap: 32px;
     }
+
+    /* CARD LINK */
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
     .card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -334,6 +342,28 @@
       color: var(--text-muted);
       font-size: 0.95rem;
       line-height: 1.6;
+    }
+
+    /* GROUP TAGS */
+    .group-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 4px 12px;
+      border-radius: 40px;
+      margin-bottom: 12px;
+    }
+    .group-tag.genesis {
+      color: #10B981;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      background: rgba(16, 185, 129, 0.06);
+    }
+    .group-tag.alignment {
+      color: #22D3EE;
+      border: 1px solid rgba(34, 211, 238, 0.3);
+      background: rgba(34, 211, 238, 0.06);
     }
 
     .footer-box {
@@ -480,7 +510,7 @@
     <div class="brand-logo">THE AGI<span>.</span></div>
     <div class="brand-sub">Artificial General Intelligence</div>
     <div class="nav-links">
-      <a href="https://www.awimind.com/" target="_blank">AWI</a>
+      <a href="https://www.theawimind.com/" target="_blank">AWI</a>
       <a href="https://www.theasimind.com/" target="_blank">ASI</a>
     </div>
   </header>
@@ -568,230 +598,261 @@
       <!-- LAYER I -->
       <span class="layer-divider">LAYER I / FOUNDATIONS & COGNITION</span>
 
-      <!-- 01 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="theagimind.png" alt="theAGImind Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">01 / GENESIS</div>
-          <h3 class="card-title">theAGImind</h3>
-          <p class="card-desc">
-            The conceptual center of THE AGI ecosystem —
-            exploring the genesis of general intelligence,
-            synthetic reasoning, abstraction,
-            multi-domain problem solving and
-            the architecture of autonomous thought.
-          </p>
-        </div>
-      </article>
+      <!-- 01 / GENESIS -->
+      <a href="agi-genesis.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="theagimind.png" alt="theAGImind Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">01 / GENESIS</div>
+            <span class="group-tag genesis">✦ Genesis</span>
+            <h3 class="card-title">theAGImind</h3>
+            <p class="card-desc">
+              The conceptual center of THE AGI ecosystem —
+              exploring the genesis of general intelligence,
+              synthetic reasoning, abstraction,
+              multi-domain problem solving and
+              the architecture of autonomous thought.
+            </p>
+          </div>
+        </article>
+      </a>
 
-      <!-- 02 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-deep.png" alt="AGI Deep Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">02 / UNDERSTANDING</div>
-          <h3 class="card-title">AGI Deep</h3>
-          <p class="card-desc">
-            Moving beyond deep learning toward deep understanding —
-            exploring multi-layered context,
-            implicit logic and conceptual synthesis
-            beyond statistical pattern matching.
-          </p>
-        </div>
-      </article>
+      <!-- 02 / UNDERSTANDING -->
+      <a href="agi-deep.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="agi-deep.png" alt="AGI Deep Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">02 / UNDERSTANDING</div>
+            <span class="group-tag genesis">✦ Genesis</span>
+            <h3 class="card-title">AGI Deep</h3>
+            <p class="card-desc">
+              Moving beyond deep learning toward deep understanding —
+              exploring multi-layered context,
+              implicit logic and conceptual synthesis
+              beyond statistical pattern matching.
+            </p>
+          </div>
+        </article>
+      </a>
 
-      <!-- 03 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-cortex.png" alt="AGI Cortex Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">03 / ARCHITECTURE</div>
-          <h3 class="card-title">AGI Cortex</h3>
-          <p class="card-desc">
-            Exploring the central architecture of general cognition —
-            memory systems, executive reasoning,
-            decision-making layers and the computational
-            organization of autonomous intelligence.
-          </p>
-        </div>
-      </article>
+      <!-- 03 / ARCHITECTURE -->
+      <a href="agi-cortex.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="agi-cortex.png" alt="AGI Cortex Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">03 / ARCHITECTURE</div>
+            <span class="group-tag genesis">✦ Genesis</span>
+            <h3 class="card-title">AGI Cortex</h3>
+            <p class="card-desc">
+              Exploring the central architecture of general cognition —
+              memory systems, executive reasoning,
+              decision-making layers and the computational
+              organization of autonomous intelligence.
+            </p>
+          </div>
+        </article>
+      </a>
 
       <!-- LAYER II -->
       <span class="layer-divider">LAYER II / DYNAMICS & COMPLEXITY</span>
 
-      <!-- 04 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-fold.png" alt="AGI Fold Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">04 / GEOMETRY</div>
-          <h3 class="card-title">AGI Fold</h3>
-          <p class="card-desc">
-            Applying general intelligence to high-dimensional systems,
-            complex geometry, molecular structures
-            and non-linear problems where
-            traditional computation reaches its limits.
-          </p>
-        </div>
-      </article>
+      <!-- 04 / GEOMETRY -->
+      <a href="agi-fold.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="agi-fold.png" alt="AGI Fold Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">04 / GEOMETRY</div>
+            <h3 class="card-title">AGI Fold</h3>
+            <p class="card-desc">
+              Applying general intelligence to high-dimensional systems,
+              complex geometry, molecular structures
+              and non-linear problems where
+              traditional computation reaches its limits.
+            </p>
+          </div>
+        </article>
+      </a>
 
-      <!-- 05 / AGI SYNAPSE -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-synapse.png" alt="AGI Synapse Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">05 / SYNAPSE</div>
-          <h3 class="card-title">AGI Synapse</h3>
-          <div class="card-slogan">The Architecture of Synthetic Signal.</div>
-          <p class="card-desc">
-            The architecture of synthetic signal —
-            orchestrating high-speed neural routing,
-            dynamic signal pathways,
-            and synaptic connectivity across autonomous intelligence systems.
-          </p>
-        </div>
-      </article>
+      <!-- 05 / SYNAPSE -->
+      <a href="agi-synapse.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="agi-synapse.png" alt="AGI Synapse Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">05 / SYNAPSE</div>
+            <h3 class="card-title">AGI Synapse</h3>
+            <div class="card-slogan">The Architecture of Synthetic Signal.</div>
+            <p class="card-desc">
+              The architecture of synthetic signal —
+              orchestrating high-speed neural routing,
+              dynamic signal pathways,
+              and synaptic connectivity across autonomous intelligence systems.
+            </p>
+          </div>
+        </article>
+      </a>
 
-      <!-- 06 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-pulse.png" alt="AGI Pulse Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">06 / REAL-TIME</div>
-          <h3 class="card-title">AGI Pulse</h3>
-          <p class="card-desc">
-            Monitoring the real-time pulse of intelligence —
-            continuous reasoning,
-            adaptive response,
-            live state synchronization
-            and dynamic decision-making across systems.
-          </p>
-        </div>
-      </article>
+      <!-- 06 / REAL-TIME -->
+      <a href="agi-pulse.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="agi-pulse.png" alt="AGI Pulse Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">06 / REAL-TIME</div>
+            <h3 class="card-title">AGI Pulse</h3>
+            <p class="card-desc">
+              Monitoring the real-time pulse of intelligence —
+              continuous reasoning,
+              adaptive response,
+              live state synchronization
+              and dynamic decision-making across systems.
+            </p>
+          </div>
+        </article>
+      </a>
 
-      <!-- 07 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-omni.png" alt="AGI Omni Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">07 / DIMENSIONS</div>
-          <h3 class="card-title">AGI Omni</h3>
-          <p class="card-desc">
-            Intelligence across modalities and dimensions —
-            integrating language,
-            vision,
-            spatial awareness,
-            sensory information
-            and abstract reasoning into a unified system.
-          </p>
-        </div>
-      </article>
+      <!-- 07 / DIMENSIONS -->
+      <a href="agi-omni.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="agi-omni.png" alt="AGI Omni Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">07 / DIMENSIONS</div>
+            <h3 class="card-title">AGI Omni</h3>
+            <p class="card-desc">
+              Intelligence across modalities and dimensions —
+              integrating language,
+              vision,
+              spatial awareness,
+              sensory information
+              and abstract reasoning into a unified system.
+            </p>
+          </div>
+        </article>
+      </a>
 
       <!-- LAYER III -->
       <span class="layer-divider">LAYER III / ALIGNMENT, SAFETY & REALITY</span>
 
-      <!-- 08 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-guard.png" alt="AGI Guard Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">08 / PERIMETER</div>
-          <h3 class="card-title">AGI Guard</h3>
-          <p class="card-desc">
-            Establishing operational boundaries
-            for autonomous intelligence —
-            active guardrails,
-            safety constraints
-            and containment frameworks.
-          </p>
-        </div>
-      </article>
+      <!-- 08 / PERIMETER -->
+      <a href="agi-guard.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="agi-guard.png" alt="AGI Guard Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">08 / PERIMETER</div>
+            <span class="group-tag alignment">🛡 Alignment</span>
+            <h3 class="card-title">AGI Guard</h3>
+            <p class="card-desc">
+              Establishing operational boundaries
+              for autonomous intelligence —
+              active guardrails,
+              safety constraints
+              and containment frameworks.
+            </p>
+          </div>
+        </article>
+      </a>
 
-      <!-- 09 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-sentry.png" alt="AGI Sentry Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">09 / VIGILANCE</div>
-          <h3 class="card-title">AGI Sentry</h3>
-          <p class="card-desc">
-            Continuous observation of autonomous systems —
-            monitoring behavior,
-            detecting goal drift
-            and preserving alignment
-            as intelligence becomes increasingly autonomous.
-          </p>
-        </div>
-      </article>
+      <!-- 09 / VIGILANCE -->
+      <a href="agi-sentry.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="agi-sentry.png" alt="AGI Sentry Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">09 / VIGILANCE</div>
+            <span class="group-tag alignment">🛡 Alignment</span>
+            <h3 class="card-title">AGI Sentry</h3>
+            <p class="card-desc">
+              Continuous observation of autonomous systems —
+              monitoring behavior,
+              detecting goal drift
+              and preserving alignment
+              as intelligence becomes increasingly autonomous.
+            </p>
+          </div>
+        </article>
+      </a>
 
-      <!-- 10 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-verify.png" alt="AGI Verify Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">10 / VERIFICATION</div>
-          <h3 class="card-title">AGI Verify</h3>
-          <p class="card-desc">
-            Exploring verifiable intelligence —
-            formal reasoning,
-            trust mechanisms,
-            validation systems
-            and methods for distinguishing
-            reliable conclusions from uncertainty.
-          </p>
-        </div>
-      </article>
+      <!-- 10 / VERIFICATION -->
+      <a href="agi-verify.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="agi-verify.png" alt="AGI Verify Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">10 / VERIFICATION</div>
+            <span class="group-tag alignment">🛡 Alignment</span>
+            <h3 class="card-title">AGI Verify</h3>
+            <p class="card-desc">
+              Exploring verifiable intelligence —
+              formal reasoning,
+              trust mechanisms,
+              validation systems
+              and methods for distinguishing
+              reliable conclusions from uncertainty.
+            </p>
+          </div>
+        </article>
+      </a>
 
-      <!-- 11 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agivoid.png" alt="AGI Void Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">11 / BLIND SPOTS</div>
-          <h3 class="card-title">AGI Void</h3>
-          <div class="card-slogan">Filling the Blind Spots of AGI.</div>
-          <p class="card-desc">
-            Exploring the unknown spaces within general intelligence —
-            hidden limitations,
-            unresolved uncertainty,
-            cognitive blind spots
-            and the boundaries between
-            what an AGI can understand
-            and what it cannot yet see.
-          </p>
-        </div>
-      </article>
+      <!-- 11 / BLIND SPOTS -->
+      <a href="agivoid.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="agivoid.png" alt="AGI Void Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">11 / BLIND SPOTS</div>
+            <span class="group-tag alignment">🛡 Alignment</span>
+            <h3 class="card-title">AGI Void</h3>
+            <div class="card-slogan">Filling the Blind Spots of AGI.</div>
+            <p class="card-desc">
+              Exploring the unknown spaces within general intelligence —
+              hidden limitations,
+              unresolved uncertainty,
+              cognitive blind spots
+              and the boundaries between
+              what an AGI can understand
+              and what it cannot yet see.
+            </p>
+          </div>
+        </article>
+      </a>
 
-      <!-- 12 -->
-      <article class="card">
-        <div class="card-image-wrapper">
-          <img src="agi-matter.png" alt="AGI Matter Logo">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">12 / MATERIALIZATION</div>
-          <h3 class="card-title">AGI Matter</h3>
-          <p class="card-desc">
-            Bridging artificial cognition with physical reality —
-            robotics,
-            material science,
-            bio-computational interfaces
-            and the execution of intelligent decisions
-            in the real world.
-          </p>
-        </div>
-      </article>
+      <!-- 12 / MATERIALIZATION -->
+      <a href="agi-matter.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="agi-matter.png" alt="AGI Matter Logo">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">12 / MATERIALIZATION</div>
+            <h3 class="card-title">AGI Matter</h3>
+            <p class="card-desc">
+              Bridging artificial cognition with physical reality —
+              robotics,
+              material science,
+              bio-computational interfaces
+              and the execution of intelligent decisions
+              in the real world.
+            </p>
+          </div>
+        </article>
+      </a>
 
     </div>
   </section>
