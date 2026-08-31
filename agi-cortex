@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>03/27 — AGI Cortex — The Mind Genesis</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Aynı stiller */
+    body {
+      background: #05070D;
+      color: #F1F5F9;
+      font-family: 'Inter', sans-serif;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    .glass {
+      background: rgba(10, 14, 25, 0.75);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 20px;
+      padding: 32px 28px;
+      margin-bottom: 24px;
+    }
+    .gradient-text {
+      background: linear-gradient(120deg, #22D3EE, #A855F7, #10B981);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .back-link {
+      color: #94A3B8;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+    }
+    .back-link:hover { color: white; }
+    .dimension-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #A855F7;
+      letter-spacing: 2px;
+    }
+    h1 { font-size: 2.5rem; font-weight: 700; margin: 8px 0 4px; }
+    .subtitle { color: #94A3B8; font-size: 1.1rem; margin-top: 4px; }
+    .manifesto {
+      font-size: 1.3rem;
+      font-style: italic;
+      color: #22D3EE;
+      border-left: 4px solid #A855F7;
+      padding-left: 20px;
+      margin: 24px 0;
+    }
+    h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; color: #A855F7; margin-bottom: 8px; }
+    .muted { color: #94A3B8; }
+    .border-top { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; margin-top: 20px; }
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 32px;
+    }
+    .nav-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+    }
+    .nav-links a:hover { color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to Architecture</a>
+
+    <div class="glass">
+      <div class="dimension-number">03 / 27 · ARCHITECTURE</div>
+      <h1>AGI Cortex</h1>
+      <p class="subtitle">Karar verme katmanları, bellek sistemleri ve zekanın bilişsel organizasyonu.</p>
+    </div>
+
+    <div class="glass">
+      <h2>The Essence</h2>
+      <p>Karar verme katmanları, bellek sistemleri ve zekanın bilişsel organizasyonu.</p>
+    </div>
+
+    <div class="glass">
+      <h2>The Mechanism</h2>
+      <p>Merkezi işlem birimlerinden farklı olarak, hiyerarşik yönetici akıl yürütme (executive reasoning) katmanlarına sahip bilişsel korteks yapısı. Bellek, karar verme ve yürütme süreçlerinin mimari çerçevesi.</p>
+    </div>
+
+    <div class="glass">
+      <h2>The Manifesto</h2>
+      <div class="manifesto">“Yapı, düşüncenin kaderidir. Cortex, zekanın iskeletidir.”</div>
+    </div>
+
+    <div class="glass">
+      <h2>The Horizon</h2>
+      <p>Merkezi işlem birimleri yerini, hiyerarşik yönetici akıl yürütme katmanlarına sahip bilişsel kortekslere bırakacaktır. Zeka, artık tek bir çekirdekte değil, dağıtık bir mimaride var olacaktır.</p>
+    </div>
+
+    <div class="glass">
+      <h2>The Connection</h2>
+      <p>AGI Genesis (01) ve AGI Deep (02) ile birlikte üçlü bir temel oluşturur. AWI Core (02/06) ile mimari benzerlik; ASI Cognition (19/27) ile ileri düzey bilişin mimari temeli.</p>
+    </div>
+
+    <div class="glass">
+      <h2>Literatür Bağlamı</h2>
+      <p class="muted">2026 itibarıyla, yapay zeka mimarileri insan beyninin kortikal yapısından ilham almaktadır. “Cortex” boyutu, bu biyolojik esinlenmeyi dijital mimariye taşıyan yaklaşımı temsil eder. <br><span style="color:#64748b; font-size:0.9rem;">(Kaynak: Nature AI, “Cortical Architectures for AGI”, 2026)</span></p>
+    </div>
+
+    <div class="nav-links">
+      <a href="agi-deep.html">← Previous</a>
+      <span></span>
+    </div>
+  </div>
+</body>
+</html>
