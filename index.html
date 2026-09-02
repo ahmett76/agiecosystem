@@ -592,10 +592,8 @@
         interact with reality and confront its own boundaries.
       </p>
     </div>
-  </section>
 
-  <!-- ARCHITECTURE -->
-  <section>
+    <!-- ARCHITECTURE -->
     <div class="section-header" style="margin-top: 60px;">
       <span class="section-tag">AGI ARCHITECTURE</span>
       <h2 class="section-title">
@@ -926,4 +924,25 @@
     <br>
     <span style="opacity: 0.5; margin-top: 6px; display: inline-block;">© 2026</span>
     <div class="footer-links">
-      <a href="https://www.themindgenesis.com/" target="_blank" class="gen
+      <a href="https://www.themindgenesis.com/" target="_blank" class="genesis-link">TMG</a>
+      <a href="https://www.theawimind.com/" target="_blank">AWI</a>
+      <a href="https://www.theasimind.com/" target="_blank">ASI</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.card, .footer-box').forEach(el => {
+      observer.observe(el);
+    });
+  });
